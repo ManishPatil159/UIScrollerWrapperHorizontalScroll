@@ -1,0 +1,21 @@
+<aura:component controller="DatatableScrollingController" implements="force:appHostable" >
+	
+    <aura:attribute type="Account[]" name="acctList"/>
+    <aura:attribute name="mycolumns" type="List"/>
+     
+    <aura:handler name="init" value="{!this}" action="{!c.fetchAcc}"/>
+    
+    <lightning:card title="iPhone/iPad Scrolling Demo">
+         <lightning:layout class="slds-var-p-around_medium">
+             <lightning:layoutItem size="10">
+                 <ui:scrollerWrapper class="scrollerSize datatable-parent">
+                	<lightning:datatable data="{! v.acctList }"
+                             columns="{! v.mycolumns }"
+                             keyField="id"
+                             hideCheckboxColumn="true"/>
+                     <div class="buffer-div"></div>
+                 </ui:scrollerWrapper>
+             </lightning:layoutItem>
+        </lightning:layout >
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,9 @@
+.THIS .buffer-div {
+    min-height:5px;
+    width:100%;
+    background-color:blue;
+}
+
+.THIS .datatable-parent{
+    height: calc(100% - 5px);
+}
